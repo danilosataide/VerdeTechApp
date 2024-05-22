@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Alert } from 'react-native' 
+import { View, Text, StyleSheet, Pressable , ImageBackground, Alert } from 'react-native' 
 import { FontAwesome } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
@@ -59,7 +59,7 @@ const Welcome = ({ navigation: { navigate } }) => {
           Organize seus projetos de jardinagem e acompanhe o tempo com o nosso aplicativo.
         </Text>
         </View>
-        <TouchableOpacity 
+        <Pressable  
           style={styles.button} 
         
           onPress={handleAcessar} 
@@ -69,7 +69,7 @@ const Welcome = ({ navigation: { navigate } }) => {
             Acessar
           </Text>
           <FontAwesome style={styles.buttonIcon} name="chevron-right" size={16}/>
-        </TouchableOpacity>
+        </Pressable >
       </Animatable.View>
       </ImageBackground>
     </View>
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   containerLogo: {
     flex: 2,
     backgroundColor: 'transparent',
-    opacity: '1',
+    opacity: 1,
     justifyContent: 'center',
     alignItems: 'center'
   },

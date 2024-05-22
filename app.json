@@ -25,6 +25,7 @@
       "package": "com.upx.VerdeTechProject"
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.jpeg"
     },
     "extra": {

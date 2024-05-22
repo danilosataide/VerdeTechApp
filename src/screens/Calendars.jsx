@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
         height: 'auto',
         backgroundColor: 'transparent',
         alignSelf: 'center',
-        width: '90%',
         marginTop: 5,
         display: 'flex',
         alignContent:"center",

@@ -37,7 +37,7 @@ const DATA = [
 ];
 
 const Item = ({item, onPress, backgroundColor, textColor}) => (
-  <TouchableOpacity onPress={onPress} style={[styles.item, {backgroundColor}]}>
+  <TouchableOpacity key={item.title} onPress={onPress} style={[styles.item, {backgroundColor}]}>
     {/* <Image
       source={{ uri: item.imageUrl }}
       style={[styles.image, {height: '100%',width: '100%'}]}
@@ -170,7 +170,6 @@ const styles = StyleSheet.create({
     height: 'auto',
     backgroundColor: 'transparent',
     alignSelf: 'center',
-    width: '90%',
     marginTop: 5,
     display: 'flex',
     alignContent:"center",

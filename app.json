@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "VerdeTechProject",
-    "slug": "VerdeTechProject",
+    "name": "VerdeTech",
+    "slug": "VerdeTech",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#fff"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,7 +20,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#4F6F46"
       },
       "package": "com.upx.VerdeTechProject"
     },

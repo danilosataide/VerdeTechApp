@@ -1,8 +1,6 @@
 import React,{useState} from "react";
 import { FlatList, SafeAreaView, StatusBar, View, Text, TextInput, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
 import * as Animatable from 'react-native-animatable';
-import Cebolinha from "../viewStatics/cebolinha";
-
 
 const Details = ({ route }) => {
   

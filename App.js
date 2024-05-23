@@ -9,8 +9,7 @@ const App = () => {
     <NavigationContainer>
       <StatusBar backgroundColor={'transparent'} barStyle={'light-content'} />
       
-      {/* <StackNavigator /> */}
-      <TabNavigator />
+      <StackNavigator />
      
     </NavigationContainer>
   );

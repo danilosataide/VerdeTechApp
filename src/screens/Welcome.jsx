@@ -9,8 +9,6 @@ import * as Animatable from 'react-native-animatable';
 
 import LogoFacens from '../../assets/logofacens.jpeg';
 
-import BottomTabNavigator from '../navigations/TabNavigator';
-
 const Welcome = ({ navigation: { navigate } }) => {
   // const navigation  = useNavigation()
   const image = require('../../assets/fundo1.jpeg')

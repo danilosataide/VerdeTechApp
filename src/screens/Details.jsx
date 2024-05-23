@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { FlatList, SafeAreaView, StatusBar, View, Text, TextInput, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
 import * as Animatable from 'react-native-animatable';
-
+import Cebolinha from "../viewStatics/cebolinha";
 
 
 const Details = ({ route }) => {
@@ -13,15 +13,21 @@ const Details = ({ route }) => {
       </Animatable.View>
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
+        <Text style={styles.title}>{route.params.itemSelected.title}</Text>
+        <ScrollView style={styles.containerSafeArea}>
 
-
-        <SafeAreaView style={styles.containerSafeArea}>
-          <Text style={styles.content}>
-            <Text style={styles.title}>{route.params.itemSelected.title}</Text>
-            {/* <Text style={styles.separator}><View style={styles.separator}/></Text> */}
-          </Text>
-        </SafeAreaView>
-        
+            {route.params.itemSelected.plantCareData.map((section, index) => (
+                <View key={index}>
+                    <Text style={styles.titleContent}>{section.title}</Text>
+                    {/* {section.content.map((item, idx) => (
+                        <Text style={styles.content} key={idx}>{item}</Text>
+                    ))} */}
+                    {section.content.map((item, idx) => (
+                        <Text style={styles.content} key={`${index}-${idx}`}>{item}</Text>
+                    ))}
+                </View>
+            ))}
+        </ScrollView>
         </Animatable.View>
 
       
@@ -32,13 +38,13 @@ const Details = ({ route }) => {
 
 const styles = StyleSheet.create({
   container: {
-  flex: 1,
-  backgroundColor: '#4F6F46',
+    flex: 1,
+    backgroundColor: '#4F6F46',
   },
   containerSafeArea: {
-  flex: 1,
-  marginHorizontal: 20,
-  marginTop: StatusBar.currentHeight || 0,
+    flex: 1,
+    marginHorizontal: 20,
+    marginTop: StatusBar.currentHeight || 0,
   },
   containerHeader: {
       marginTop: '3%',
@@ -57,26 +63,34 @@ const styles = StyleSheet.create({
       flex: 1,
       // borderTopLeftRadius: 40,
       // borderTopRightRadius: 40,
-      paddingTop: 28,
+      paddingTop: 20,
+      paddingBottom: 80,
     },
   
+ 
     content: {
-      width: '100%',
-      height: 'auto',
-      backgroundColor: 'transparent',
-      alignSelf: 'center',
       marginTop: 5,
-      display: 'flex',
-      alignContent:"center",
-      textAlign: "auto"
-    },
+      fontSize: 16,
+      lineHeight: 24,
+
+  },
     title: {
       backgroundColor: 'transparent',
-      fontSize: 18,
-      width: '80%',
+      fontSize: 22,
+      width: '100%',
       color: '#4F6F46',
       fontWeight: 'bold',
+      textAlign: 'center',
+      alignItems: 'center',
+      paddingBottom: 20
     },
+    titleContent: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginTop: 20,
+        marginBottom: 10,
+    },
+    
 });
 
 export default Details;

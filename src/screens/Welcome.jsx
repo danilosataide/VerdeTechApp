@@ -1,9 +1,7 @@
 import React from 'react'
-import { View, Text, StyleSheet, Pressable , ImageBackground, Alert } from 'react-native' 
+import { View, Text, StyleSheet, Pressable , ImageBackground, Image } from 'react-native' 
 import { FontAwesome } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Image } from 'expo-image';
-
 
 import * as Animatable from 'react-native-animatable';
 
@@ -34,8 +32,10 @@ const Welcome = ({ navigation: { navigate } }) => {
           style = {{ width: "50%", height: "50%", backgroundColor: 'transparent' }} resizeMode='contain'
         /> */}
         <Animatable.View delay={500} animation="fadeInUp" style={styles.containerLogoAnimation}>
-          <MaterialCommunityIcons name="shovel" size={46} color="white" />
-
+          {/* <MaterialCommunityIcons name="shovel" size={46} color="white" /> */}
+          <Image source={require('../../assets/icon.png')} 
+           style = {{ width: 80, height: 80}} resizeMode='contain'
+          /> 
           <Text style={styles.title}>
             VERDE TECH
           </Text>

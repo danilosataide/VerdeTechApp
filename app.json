@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "VerdeTech",
-    "slug": "VerdeTech",
+    "name": "VerdeTechProject",
+    "slug": "VerdeTechProject",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -32,6 +32,14 @@
       "eas": {
         "projectId": "9535f1a3-a223-4551-bc3e-198b7f2e0106"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ]
   }
 }
